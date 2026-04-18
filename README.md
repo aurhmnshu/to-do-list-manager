@@ -1,4 +1,4 @@
-# TO-DO LIST PROGRAM
+# TO-DO LIST MANAGER
 A simple To-Do List Manager in C using txt files
 
 ## Features
