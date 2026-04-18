@@ -1,5 +1,5 @@
 # TO-DO LIST PROGRAM
-A simple To-Do List program in C using txt files
+A simple To-Do List Manager in C using txt files
 
 ## Features
 - **Add Tasks** - Create new tasks with custom numbering
