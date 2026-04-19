@@ -85,7 +85,7 @@ int main(){
 	printf("<2> Show Tasks\n");
 	printf("<3> Mark a Task\n");
 	printf("<4> Exit\n");
-	printf("-------------------\n");
+	printf("------------------\n");
 	if (scanf("%d", &choice) != 1) {
 	    // handle non-integer input
 	    while (getchar() != '\n');
