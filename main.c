@@ -1,7 +1,3 @@
-/* Note to self: Make Functions [/] 
-                 Extend the show function to show completed tasks [/] 
-*/
-
 #include <sys/stat.h> // Uncomment if you are on Linux/UNIX; Comment this if you are on Windows
 //#include <direct.h> // Uncomment this if you are on Windows; Comment it if you are on Linux/UNIX
 #include <stdio.h>
