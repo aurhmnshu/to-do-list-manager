@@ -4,6 +4,15 @@
 #include <string.h>
 #define MAX 200
 
+void flush(){
+    FILE *file;
+    FILE *comp;
+    file = fopen("text-files/task.txt", "w");
+    comp = fopen("text-files/completed.txt","w");
+    fclose(file);
+    fclose(comp);
+    printf("All tasks has been deleted successfully ✔");  
+}
 void add_task(){
 	FILE *file;
 	char task[MAX];
@@ -35,6 +44,7 @@ void show_task(){
      	printf("%s", content2);
      }        
      fclose(file);
+     fclose(comp);
 }
 
 void mark_task(){
@@ -84,7 +94,8 @@ int main(){
 	printf("<1> Add a Task\n");
 	printf("<2> Show Tasks\n");
 	printf("<3> Mark a Task\n");
-	printf("<4> Exit\n");
+	printf("<4> Delete all tasks\n");
+	printf("<5> Exit\n");
 	printf("------------------\n");
 	if (scanf("%d", &choice) != 1) {
 	    // handle non-integer input
@@ -97,9 +108,10 @@ int main(){
     	case 1: add_task(); break;
     	case 2: show_task(); break;
     	case 3: mark_task(); break;
-    	case 4: printf("Have a Good Day!\n"); break;
+    	case 4: flush(); break;
+    	case 5: printf("Have a Good Day!\n"); break;
     	default: printf("Invalid Choice\n");
     }
-  }while(choice  != 4 );
+  }while(choice  != 5 );
   return 0;
 }
