@@ -4,15 +4,6 @@
 #include <string.h>
 #define MAX 200
 
-void flush(){
-    FILE *file;
-    FILE *comp;
-    file = fopen("text-files/task.txt", "w");
-    comp = fopen("text-files/completed.txt","w");
-    fclose(file);
-    fclose(comp);
-    printf("All tasks has been deleted successfully ✔");  
-}
 void add_task(){
 	FILE *file;
 	char task[MAX];
@@ -85,6 +76,16 @@ void mark_task(){
 		printf("Task %d -> Marked as Completed [/].\n", task_num);
 	}
 
+}
+
+void flush(){
+    FILE *file;
+    FILE *comp;
+    file = fopen("text-files/task.txt", "w");
+    comp = fopen("text-files/completed.txt","w");
+    fclose(file);
+    fclose(comp);
+    printf("All tasks has been deleted successfully ✔");  
 }
 
 int main(){
